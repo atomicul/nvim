@@ -4,3 +4,9 @@
 
 -- Clear search
 vim.keymap.set("n", "<C-c>", "<cmd>noh<cr>")
+
+local cycle = require("config.actions.cycle_files")
+vim.keymap.set("n", "<leader>n", cycle)
+vim.keymap.set("n", "<leader>p", function()
+  cycle({ reverse = true })
+end)
