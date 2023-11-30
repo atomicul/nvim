@@ -6,7 +6,9 @@
 vim.keymap.set("n", "<C-c>", "<cmd>noh<cr>")
 
 local cycle = require("config.actions.cycle_files")
-vim.keymap.set("n", "<leader>n", cycle)
-vim.keymap.set("n", "<leader>p", function()
+vim.keymap.set("n", "]f", cycle, { desc = "Next file" })
+vim.keymap.set("n", "[f", function()
   cycle({ reverse = true })
+end, { desc = "Prev file" })
+
 end)
