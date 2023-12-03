@@ -11,4 +11,5 @@ vim.keymap.set("n", "[f", function()
   cycle({ reverse = true })
 end, { desc = "Prev file" })
 
-end)
+local create_class = require("config.cpp.create_class.create_class")
+vim.keymap.set("n", "<leader>cc", create_class, { desc = "Create class" })
